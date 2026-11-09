@@ -31,8 +31,8 @@ public class DataProduk {
         for (Produk p : listProduk) {
             String hargaStr = String.valueOf(p.getHarga());
             
-             if (p.getKodeProduk().toLowerCase().startsWith(key) ||
-                p.getNamaProduk().toLowerCase().startsWith(key) ||
+            if (p.getKodeProduk().toLowerCase().startsWith(key) ||
+                p.getNamaProduk().toLowerCase().contains(key) || 
                 p.getKategori().toLowerCase().startsWith(key) ||
                 hargaStr.equals(key) || hargaStr.startsWith(key)) {
                 
