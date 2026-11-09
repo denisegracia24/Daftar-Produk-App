@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kelas.controller.DetailController" stylesheets="@styles/app.css">
+    <top>
+        <HBox styleClass="header" spacing="16" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+            <children>
+                <Label text="Detail Produk Toko" styleClass="title"/>
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button text="&lt; Kembali ke Daftar" onAction="#handleKembali" styleClass="button-secondary"/>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true">
+            <content>
+                <VBox styleClass="page" spacing="16" alignment="CENTER">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                    <children>
+                        <VBox styleClass="card" spacing="12" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 25; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 0);">
+                            <children>
+                                <Label text="Kode Produk" styleClass="muted"/>
+                                <Label fx:id="lblKode" styleClass="subtitle" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                                
+                                <Label text="Nama Produk" styleClass="muted"/>
+                                <Label fx:id="lblNama" wrapText="true" style="-fx-font-size: 14px;"/>
+                                
+                                <Label text="Kategori" styleClass="muted"/>
+                                <Label fx:id="lblKategori" styleClass="subtitle" style="-fx-font-size: 14px;"/>
+                                
+                                <Label text="Harga (Rp)" styleClass="muted"/>
+                                <Label fx:id="lblHarga" styleClass="title" style="-fx-text-fill: #27ae60; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
